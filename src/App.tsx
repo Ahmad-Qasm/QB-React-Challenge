@@ -13,10 +13,9 @@ export function App() {
   return (
     <div>
       <AppHeader />
-
       <div className="container">
         <AppRoutes />
       </div>
     </div>
-  )
+  );
 }
