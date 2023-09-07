@@ -1,4 +1,3 @@
-// use this function to fetch the orders.
 import { useEffect, useState } from "react";
 import { getOrders } from "../../api/api";
 import { Button } from "../Button/Button";
@@ -19,15 +18,6 @@ interface Order {
 }
 
 export function OrdersList(){
-
-  /**
-   * TODO: Implement the OrdersList component.
-   *
-   * Fetch the orders from the API and display them in a list/table.
-   *
-   * use the imported function to fetch the orders from the API: getOrders()
-   */
-  
   const [orders, setOrders] = useState<Order[]>([]);
  
   useEffect(()=>{
@@ -36,7 +26,7 @@ export function OrdersList(){
         const result = getOrders();
         setOrders(await result);
       } catch (error) {
-        console.error('error', error);
+        console.error('error: ', error);
       }}
     fetchOrders();
   }
